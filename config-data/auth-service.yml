@@ -5,7 +5,7 @@ spring:
   application:
     name: auth-service
   datasource:
-    url: jdbc:postgresql://auth-db:5432/auth_db
+    url: jdbc:mysql://mysql-db:3306/authdb # MySQL veritabanı bağlantı URL'si
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
     driver-class-name: org.Mysql.Driver
