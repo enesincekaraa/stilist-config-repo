@@ -5,10 +5,10 @@ spring:
   application:
     name: auth-service
   datasource:
-    url: jdbc:mysql://mysql-db:3306/authdb # MySQL veritabanı bağlantı URL'si
+    url: jdbc:mysql://localhost:3306/auth_service_db # Docker network içindeki MySQL veritabanı adı ve portu
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
-    driver-class-name: org.Mysql.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: update
@@ -23,3 +23,9 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://eureka-server:8761/eureka # Eureka Server'ın Docker network içindeki adı ve portu
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,refresh
