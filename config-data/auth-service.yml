@@ -22,7 +22,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka # Eureka Server'ın Docker network içindeki adı ve portu
+      defaultZone: http://eureka-server:8761/eureka # Eureka Server'ın Docker network içindeki adı ve portu
 
 management:
   endpoints:
