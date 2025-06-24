@@ -23,3 +23,10 @@ management:
     web:
       exposure:
         include: health,info,refresh
+feign: # Feign ayarları
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
