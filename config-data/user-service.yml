@@ -30,8 +30,9 @@ feign: # Feign ayarları
         connectTimeout: 5000
         readTimeout: 5000
         loggerLevel: basic
-    auth-service:
-      url: http://auth-service:8081
+      auth-service:
+        url: http://auth-service:8081
+
 
 auth-service:
   system-user:
